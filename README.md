@@ -95,3 +95,6 @@ The planned video feature should use the stored Cloudinary images and generate a
 - downloadable MP4
 
 Keep the gallery/storage system independent so video generation can be added without changing how memories are stored.
+
+## Railway build fix
+This version intentionally uses `npm install --omit=dev` in Docker and does not require a package-lock.json. Upload the extracted project files to the root of your GitHub repository.
