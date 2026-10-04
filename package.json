@@ -1,0 +1,21 @@
+{
+  "name": "birthday-memory-lane",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Birthday Memory Lane - photo memories stored in cloud storage with Railway/PostgreSQL backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cloudinary": "^2.7.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "pg": "^8.16.3"
+  }
+}

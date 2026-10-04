@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Memory Lane</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">MEMORY LANE</a>
+    <a class="small-link" href="/admin.html">Admin</a>
+  </header>
+
+  <main id="app" class="page">
+    <section id="landing" class="hero">
+      <p class="eyebrow">A DIGITAL COLLECTION OF MEMORIES</p>
+      <h1>Every picture<br><span>keeps a moment alive.</span></h1>
+      <p class="lead">Open a birthday Memory Lane to revisit photos, messages, and the people who made the day special.</p>
+      <div class="lookup">
+        <input id="slugInput" placeholder="Enter Memory Lane code">
+        <button id="openBtn">Open Memory</button>
+      </div>
+      <p class="hint">Example: alex-2026</p>
+    </section>
+
+    <section id="memory" class="memory hidden"></section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

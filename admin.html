@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Memory Lane Admin</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/">MEMORY LANE</a>
+  <a class="small-link" href="/">View</a>
+</header>
+
+<main class="page admin">
+  <section class="panel">
+    <p class="eyebrow">V1 ADMIN</p>
+    <h1>Create a Memory Lane</h1>
+    <p class="muted">Create the birthday page first, then use its private upload link to collect memories.</p>
+
+    <form id="createForm">
+      <label>Admin Key<input type="password" name="adminKey" required></label>
+      <label>Celebrant Name<input name="celebrantName" placeholder="Alex" required></label>
+      <label>Memory Lane Title<input name="title" placeholder="Alex's 2026 Birthday" required></label>
+      <label>Intro Message<textarea name="intro" placeholder="A collection of memories from a special day..."></textarea></label>
+      <button>Create Memory Lane</button>
+    </form>
+    <div id="createResult" class="result"></div>
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow">UPLOAD</p>
+    <h2>Add memories</h2>
+    <form id="uploadForm">
+      <label>Memory Lane Code<input name="slug" placeholder="alex-2026" required></label>
+      <label>Photos<input type="file" name="photos" accept="image/*" multiple required></label>
+      <label>Your Name (optional)<input name="contributor" placeholder="Maria"></label>
+      <label>Caption (optional)<input name="caption" placeholder="One of my favorite memories."></label>
+      <label>Date (optional)<input type="date" name="takenAt"></label>
+      <button>Upload Photos</button>
+    </form>
+    <div id="uploadResult" class="result"></div>
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow">NEXT VERSION</p>
+    <h2>🎬 Memory Video</h2>
+    <p class="muted">V1 stores and displays the memories. V2 can turn the gallery into a downloadable birthday slideshow with music, transitions, captions, and a cinematic intro.</p>
+  </section>
+</main>
+<script src="/admin.js"></script>
+</body>
+</html>
