@@ -10,7 +10,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 if (!process.env.DATABASE_URL) {
-  console.warn("DATABASE_URL is not configured.");
+  console.error("FATAL: DATABASE_URL is not configured. Add a Railway PostgreSQL service and reference its DATABASE_URL in this app service.");
+  process.exit(1);
 }
 
 cloudinary.config({
@@ -246,7 +247,7 @@ app.delete("/api/photos/:id", requireAdmin, async (req, res) => {
   }
 });
 
-app.get("*", (req, res) => {
+app.get("/{*splat}", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
