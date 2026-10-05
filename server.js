@@ -8,7 +8,7 @@ const cloudinary = require("cloudinary").v2;
 
 const app = express();
 const port = process.env.PORT || 3000;
-const publicDir = path.join(__dirname, "public");
+const publicDir = __dirname;
 
 if (!process.env.DATABASE_URL) {
   console.error("FATAL: DATABASE_URL is not configured. Add PostgreSQL in Railway and reference its DATABASE_URL in this service.");
